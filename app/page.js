@@ -1,6 +1,5 @@
 "use client"
 
-import Image from 'next/image'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -17,6 +16,7 @@ export default function Home() {
   return (
     <>
     <Navbar />
+    {/* Conainer For all compnents */}
     <div className={styles.container}>
     <Hero />
     <About />

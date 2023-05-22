@@ -8,7 +8,7 @@ const Info = () => {
     const ref = React.useRef(null)
     const InView = useInView(ref)
     const controls = useAnimation()
-    // Animations
+    // Animations for the flower and leaf
     const FlowerVariants = {
         hidden:{
             rotate: 0,
@@ -38,6 +38,7 @@ const Info = () => {
         }
 
     }
+    // Animations for the heading
     const headingVariants = {
         hidden: {x: -20,opacity: 0},
         visible: {
@@ -49,6 +50,7 @@ const Info = () => {
             }
         }
     }
+    // Animations for the rotation
     const rotateVariants = {
         hidden:{
             y: -200,

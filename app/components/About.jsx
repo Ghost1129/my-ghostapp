@@ -6,9 +6,14 @@ import { motion, useAnimation, useInView } from "framer-motion"
 import styles from '../styles/Animate.module.css'
 
 const About = () => {
+    // Ref for the section
     const ref = React.useRef(null)
+    // InView hook to check if the element is in the viewport
     const InView = useInView(ref)
+    // Controls for the animation
     const controls = useAnimation()
+
+    // To check if the element is in the viewport
     useEffect(() => {
         if(InView){
             controls.start('visible')
@@ -18,6 +23,7 @@ const About = () => {
         }
     }, [controls,InView])
 
+    // Variants for the ghost animation
     const ghostVariants = {
         hidden:{
             offsetDistance: "0%",
@@ -26,6 +32,7 @@ const About = () => {
             offsetDistance: "100%",
         }
     }
+    // Variants for the heading animation
     const headingVariants = {
         hidden: {x: -20,opacity: 0},
         visible: {
@@ -39,7 +46,7 @@ const About = () => {
 
     }
 
-    
+    // Ticker data
     const tickerData = [
         {
             id: 1,

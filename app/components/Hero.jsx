@@ -8,9 +8,11 @@ import { motion,useAnimation,useInView } from "framer-motion"
 
 
 const Hero = () => {
+    // Ref for the section
     const ref = React.useRef(null)
+    // InView hook to check if the element is in the viewport
     const InView = useInView(ref)
-
+    // Controls for the animation
     const controls = useAnimation()
     // Animations
     const spanVariants = {
@@ -24,10 +26,12 @@ const Hero = () => {
             }
         }
     }
+    // Variants for the rotations animation
     const rotateVariants = {
         hidden: {rotate: 0},
         visible: {rotate: 360}
     }
+    // To check if the element is in the viewport
     useEffect(() => {
         if(InView){
             controls.start('visible')
